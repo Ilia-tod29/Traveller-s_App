@@ -88,19 +88,79 @@ CMakeFiles/Traveller_s_App.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/main.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\main.cpp" -o CMakeFiles\Traveller_s_App.dir\main.cpp.s
 
+CMakeFiles/Traveller_s_App.dir/User.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
+CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Traveller_s_App.dir/User.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\User.cpp.obj -c "E:\FMI\OOP\Traveller's_App\User.cpp"
+
+CMakeFiles/Traveller_s_App.dir/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/User.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\User.cpp" > CMakeFiles\Traveller_s_App.dir\User.cpp.i
+
+CMakeFiles/Traveller_s_App.dir/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/User.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\User.cpp" -o CMakeFiles\Traveller_s_App.dir\User.cpp.s
+
+CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
+CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj: ../Authorization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\Authorization.cpp.obj -c "E:\FMI\OOP\Traveller's_App\Authorization.cpp"
+
+CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\Authorization.cpp" > CMakeFiles\Traveller_s_App.dir\Authorization.cpp.i
+
+CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\Authorization.cpp" -o CMakeFiles\Traveller_s_App.dir\Authorization.cpp.s
+
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../Journey.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\Journey.cpp.obj -c "E:\FMI\OOP\Traveller's_App\Journey.cpp"
+
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/Journey.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\Journey.cpp" > CMakeFiles\Traveller_s_App.dir\Journey.cpp.i
+
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/Journey.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\Journey.cpp" -o CMakeFiles\Traveller_s_App.dir\Journey.cpp.s
+
+CMakeFiles/Traveller_s_App.dir/String.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
+CMakeFiles/Traveller_s_App.dir/String.cpp.obj: ../String.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Traveller_s_App.dir/String.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\String.cpp.obj -c "E:\FMI\OOP\Traveller's_App\String.cpp"
+
+CMakeFiles/Traveller_s_App.dir/String.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/String.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\String.cpp" > CMakeFiles\Traveller_s_App.dir\String.cpp.i
+
+CMakeFiles/Traveller_s_App.dir/String.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/String.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\String.cpp" -o CMakeFiles\Traveller_s_App.dir\String.cpp.s
+
 # Object files for target Traveller_s_App
 Traveller_s_App_OBJECTS = \
-"CMakeFiles/Traveller_s_App.dir/main.cpp.obj"
+"CMakeFiles/Traveller_s_App.dir/main.cpp.obj" \
+"CMakeFiles/Traveller_s_App.dir/User.cpp.obj" \
+"CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj" \
+"CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj" \
+"CMakeFiles/Traveller_s_App.dir/String.cpp.obj"
 
 # External object files for target Traveller_s_App
 Traveller_s_App_EXTERNAL_OBJECTS =
 
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/main.cpp.obj
+Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/User.cpp.obj
+Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj
+Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj
+Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/String.cpp.obj
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/build.make
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/linklibs.rsp
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/objects1.rsp
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Traveller_s_App.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Traveller_s_App.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Traveller_s_App.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

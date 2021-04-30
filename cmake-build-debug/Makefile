@@ -141,6 +141,114 @@ Traveller_s_App/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/build
 .PHONY : Traveller_s_App/fast
 
+Authorization.obj: Authorization.cpp.obj
+
+.PHONY : Authorization.obj
+
+# target to build an object file
+Authorization.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj
+.PHONY : Authorization.cpp.obj
+
+Authorization.i: Authorization.cpp.i
+
+.PHONY : Authorization.i
+
+# target to preprocess a source file
+Authorization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i
+.PHONY : Authorization.cpp.i
+
+Authorization.s: Authorization.cpp.s
+
+.PHONY : Authorization.s
+
+# target to generate assembly for a file
+Authorization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s
+.PHONY : Authorization.cpp.s
+
+Journey.obj: Journey.cpp.obj
+
+.PHONY : Journey.obj
+
+# target to build an object file
+Journey.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj
+.PHONY : Journey.cpp.obj
+
+Journey.i: Journey.cpp.i
+
+.PHONY : Journey.i
+
+# target to preprocess a source file
+Journey.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Journey.cpp.i
+.PHONY : Journey.cpp.i
+
+Journey.s: Journey.cpp.s
+
+.PHONY : Journey.s
+
+# target to generate assembly for a file
+Journey.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Journey.cpp.s
+.PHONY : Journey.cpp.s
+
+String.obj: String.cpp.obj
+
+.PHONY : String.obj
+
+# target to build an object file
+String.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/String.cpp.obj
+.PHONY : String.cpp.obj
+
+String.i: String.cpp.i
+
+.PHONY : String.i
+
+# target to preprocess a source file
+String.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/String.cpp.i
+.PHONY : String.cpp.i
+
+String.s: String.cpp.s
+
+.PHONY : String.s
+
+# target to generate assembly for a file
+String.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/String.cpp.s
+.PHONY : String.cpp.s
+
+User.obj: User.cpp.obj
+
+.PHONY : User.obj
+
+# target to build an object file
+User.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/User.cpp.obj
+.PHONY : User.cpp.obj
+
+User.i: User.cpp.i
+
+.PHONY : User.i
+
+# target to preprocess a source file
+User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/User.cpp.i
+.PHONY : User.cpp.i
+
+User.s: User.cpp.s
+
+.PHONY : User.s
+
+# target to generate assembly for a file
+User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/User.cpp.s
+.PHONY : User.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -177,6 +285,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Traveller_s_App
+	@echo ... Authorization.obj
+	@echo ... Authorization.i
+	@echo ... Authorization.s
+	@echo ... Journey.obj
+	@echo ... Journey.i
+	@echo ... Journey.s
+	@echo ... String.obj
+	@echo ... String.i
+	@echo ... String.s
+	@echo ... User.obj
+	@echo ... User.i
+	@echo ... User.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

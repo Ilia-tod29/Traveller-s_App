@@ -4,6 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "E:/FMI/OOP/Traveller's_App/Authorization.cpp" "E:/FMI/OOP/Traveller's_App/cmake-build-debug/CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj"
+  "E:/FMI/OOP/Traveller's_App/Journey.cpp" "E:/FMI/OOP/Traveller's_App/cmake-build-debug/CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj"
+  "E:/FMI/OOP/Traveller's_App/String.cpp" "E:/FMI/OOP/Traveller's_App/cmake-build-debug/CMakeFiles/Traveller_s_App.dir/String.cpp.obj"
+  "E:/FMI/OOP/Traveller's_App/User.cpp" "E:/FMI/OOP/Traveller's_App/cmake-build-debug/CMakeFiles/Traveller_s_App.dir/User.cpp.obj"
   "E:/FMI/OOP/Traveller's_App/main.cpp" "E:/FMI/OOP/Traveller's_App/cmake-build-debug/CMakeFiles/Traveller_s_App.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

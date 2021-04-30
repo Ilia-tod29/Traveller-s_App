@@ -80,6 +80,33 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Authorization.cpp">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Authorization.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Journey.cpp">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Journey.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/String.cpp">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/String.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/User.cpp">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/User.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Vector.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/main.cpp">
 			<Option target="Traveller_s_App"/>
 		</Unit>

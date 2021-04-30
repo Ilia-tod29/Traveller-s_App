@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/FMI/OOP/Traveller's_App/String.cpp
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+cstring
+-
+
+E:/FMI/OOP/Traveller's_App/String.h
+iostream
+-
+
+E:/FMI/OOP/Traveller's_App/Vector.h
+cstddef
+-
+
+E:/FMI/OOP/Traveller's_App/main.cpp
+iostream
+-
+Vector.h
+E:/FMI/OOP/Traveller's_App/Vector.h
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+
