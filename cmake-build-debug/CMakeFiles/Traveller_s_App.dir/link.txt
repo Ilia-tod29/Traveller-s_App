@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Traveller_s_App.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\Traveller_s_App.dir/objects.a @CMakeFiles\Traveller_s_App.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Traveller_s_App.dir/objects.a -Wl,--no-whole-archive -o Traveller_s_App.exe -Wl,--out-implib,libTraveller_s_App.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Traveller_s_App.dir\linklibs.rsp
