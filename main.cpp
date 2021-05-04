@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vector.h"
 #include "String.h"
+#include "Journey.h"
 int main() {
     Vector<int> dynamicArray;
     dynamicArray.pushBack(5);
@@ -44,19 +45,32 @@ int main() {
 
 
 
-    String str1("Towa e string.");
+    String str1("9owa e st-/ring.");
     String str2("A towa e dopylnenieto mu.");
     String str3;
-    std::cout << str1.length() << std::endl;
+    std::cout << str3.length() << std::endl;
     std::cout << str2.length() << std::endl;
+    std::cout << str3.isEmpty() << std::endl;
+    std::cout << str2.isEmpty() << std::endl;
 
     str3 = str1 + str2;
-    str1 += str2;
+//    str1 += str2;
 //    str2 = str1;
+    str2 = str1.getExact(1,5);
 
     std::cout << str3 << std::endl;
     std::cout << str2 << std::endl;
     std::cout << str1 << std::endl;
+    std::cout << ((int)str1[0] - 48 + 25) << std::endl;
+    std::cout << str1.leftPart('-').length() << std::endl;
+    std::cout << str1.rightPart('-').length() << std::endl;
+    std::cout << str1.leftPart('-') << std::endl;
+    std::cout << str1.rightPart('-') << std::endl;
+    std::cout << (str3 == str1) << std::endl;
     std::cout << "End of string test" << std::endl;
+
+    Journey jo;
+    jo.setTimePeriod("2019-07-05/2019-07-29");
+    jo.addPhoto("Argaz.png");
     return 0;
 }

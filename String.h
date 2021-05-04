@@ -20,11 +20,23 @@ public:
 
     size_t length() const;
 
+    char* getData() const;
+
+    bool operator==(const String& other);
+
     String& operator+=(const String& other);
 
     String operator+(const String& other);
 
     char operator[](const size_t index)const;
+
+    bool isEmpty() const;
+
+    String getExact(const size_t& start, const size_t& end) const;
+
+    String leftPart(const char& separator) const;
+
+    String rightPart(const char& separator) const;
 
     friend std::ostream& operator<<(std::ostream& os, const String& str);
 

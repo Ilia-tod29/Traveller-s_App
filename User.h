@@ -19,9 +19,9 @@ public:
 
     void setJourney(const Journey& newJourney);
 
-    String friendsVisitedADestination(const String& town, const String& country);
+    Vector<Journey> getJourneys() const;
 
-    Vector<String> getFeedbacks(const Vector<User> traveller);
+    Vector<User> friendsVisitedADestination(const String& town, const String& country) const;
 private:
     size_t id;
     String username;

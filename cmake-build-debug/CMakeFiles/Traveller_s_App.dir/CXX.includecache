@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-E:/FMI/OOP/Traveller's_App/String.cpp
+E:/FMI/OOP/Traveller's_App/Journey.h
+iostream
+-
+time.h
+-
 String.h
 E:/FMI/OOP/Traveller's_App/String.h
-cstring
--
+Vector.h
+E:/FMI/OOP/Traveller's_App/Vector.h
 
 E:/FMI/OOP/Traveller's_App/String.h
 iostream
@@ -27,4 +31,6 @@ Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
 String.h
 E:/FMI/OOP/Traveller's_App/String.h
+Journey.h
+E:/FMI/OOP/Traveller's_App/Journey.h
 

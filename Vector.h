@@ -44,6 +44,9 @@ public:
     size_t getCapacity() const {
         return this->capacity;
     }
+    T* getData() const {
+        return this->data;
+    }
 
     ~Vector();
 private:

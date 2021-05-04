@@ -22,10 +22,22 @@ struct TimePeriod {
 
 class Journey {
 public:
-    
+    void setDestionation(const String& _destination);
+
+    void setTimePeriod(const String& _timePeriod); // VALIDATION!
+
+    void setGrade(const size_t& _grade); // VALIDATION!
+
+    void setComment(const String& _comment);
+
+    void addPhoto(const String& _photo); // VALIDATION!
+
+    String getTown();
+
+    String getCountry();
 private:
-    Destination destination;
-    TimePeriod timePeriod;
+    String destination;
+    String timePeriod;
     size_t grade;
     String comment;
     Vector<String> photos;

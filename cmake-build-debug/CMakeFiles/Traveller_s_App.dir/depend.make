@@ -6,13 +6,19 @@ CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj: ../Authorization.h
 
 CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../Journey.cpp
 CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../Journey.h
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../String.h
+CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../Vector.h
 
 CMakeFiles/Traveller_s_App.dir/String.cpp.obj: ../String.cpp
 CMakeFiles/Traveller_s_App.dir/String.cpp.obj: ../String.h
 
+CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../Journey.h
+CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../String.h
 CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../User.cpp
 CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../User.h
+CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../Vector.h
 
+CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Journey.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../String.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Vector.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../main.cpp
