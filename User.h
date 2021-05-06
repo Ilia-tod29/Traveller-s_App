@@ -11,23 +11,43 @@
 #include "Vector.h"
 #include "Journey.h"
 
+
 class User {
 public:
-    void setAuth(const size_t& _id, const String& _username, const String& _password, const String& _eMail);
+    User() : id(-1) {};
 
-    void setFriend(const User& newFriend);
+    void operator=(const User& other);
+
+    // Constructor with parameters(not all data members are set here)
+    // The ID is auto-counted int the main
+    void setAuth(const int& _id, const String& _username, const String& _password, const String& _eMail);
+
+
+    void setFriend(User* newFriend);
 
     void setJourney(const Journey& newJourney);
+
+    int getId() const;
+
+    String getUsername() const;
+
+    String getPassword() const;
+
+    String getEMail() const;
 
     Vector<Journey> getJourneys() const;
 
     Vector<User> friendsVisitedADestination(const String& town, const String& country) const;
+
+    bool operator==(const User& other) const;
+
+    void showFriends() const;
 private:
-    size_t id;
+    int id;
     String username;
     String eMail;
 
-    Vector<User> friends;
+    Vector<User*> friends;
     Vector<Journey> journeys;
 protected:
     String password;

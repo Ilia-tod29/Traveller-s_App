@@ -53,7 +53,7 @@ bool isDateValid(size_t month, size_t day, size_t year)
     return validation;
 }
 
-void Journey::setDestionation(const String &_destination) {
+void Journey::setDestination(const String &_destination) {
     this->destination = _destination;
 }
 
@@ -115,4 +115,13 @@ String Journey::getTown() {
 
 String Journey::getCountry() {
     return this->destination.rightPart(',');
+}
+
+void Journey::display() {
+    std::cout << "Destination: " << this->destination << "\n";
+    std::cout << "Time period: " << this->timePeriod << "\n";
+    std::cout << "Grade: " << this->grade << "\n";
+    std::cout << "Comment: " << this->comment << "\n";
+    std::cout << "Photos: \n";
+    this->photos.print();
 }

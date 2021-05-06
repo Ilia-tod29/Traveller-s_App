@@ -1,7 +1,10 @@
 #include <iostream>
+#include <stdlib.h>
 #include "Vector.h"
 #include "String.h"
 #include "Journey.h"
+#include "User.h"
+#include "Auth.h"
 int main() {
     Vector<int> dynamicArray;
     dynamicArray.pushBack(5);
@@ -71,6 +74,41 @@ int main() {
 
     Journey jo;
     jo.setTimePeriod("2019-07-05/2019-07-29");
+    jo.setDestination("Burgas, Bulgaria");
+    jo.setGrade(5);
+    jo.setComment("Perfect place!");
     jo.addPhoto("Argaz.png");
+
+    jo.display();
+
+    User ilia, Vili;
+    Vili.setAuth(1, "Vili", "Vili123", "Vilia@abv.bg");
+    ilia.setAuth(0, "Ilia", "0000ilia6", "ilia8888@abv.bg");
+    ilia.setFriend(&Vili);
+    ilia.setJourney(jo);
+    ilia.showFriends();
+    Vili.setFriend(&ilia);
+    Vili.showFriends();
+
+    std::cout << Vili.getId() << "\n";
+
+    Vector<User> friendsVisited = Vili.friendsVisitedADestination("Burgas", " Bulgaria");
+    for (int i = 0; i < friendsVisited.getSize(); ++i) {
+        system("Color E4");
+        std::cout << friendsVisited[i].getUsername() << "\n";
+    }
+
+    User Georgi;
+    Auth a1("Georgi", "0000gosho");
+    Georgi = a1.signUp(3, "Georgi", "0000gosho", "gosho69@abv.bg");
+
+    std::cout << Georgi.getId() << "\n";
+    std::cout << Georgi.getUsername() << "\n";
+    std::cout << Georgi.getPassword() << "\n";
+    std::cout << Georgi.getEMail() << "\n";
+    for (int i = 0; i < Georgi.getJourneys().getSize(); ++i) {
+        Georgi.getJourneys()[i].display();
+    }
+    Georgi.showFriends();
     return 0;
 }

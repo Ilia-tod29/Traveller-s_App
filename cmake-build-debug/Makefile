@@ -141,32 +141,32 @@ Traveller_s_App/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/build
 .PHONY : Traveller_s_App/fast
 
-Authorization.obj: Authorization.cpp.obj
+Auth.obj: Auth.cpp.obj
 
-.PHONY : Authorization.obj
+.PHONY : Auth.obj
 
 # target to build an object file
-Authorization.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj
-.PHONY : Authorization.cpp.obj
+Auth.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj
+.PHONY : Auth.cpp.obj
 
-Authorization.i: Authorization.cpp.i
+Auth.i: Auth.cpp.i
 
-.PHONY : Authorization.i
+.PHONY : Auth.i
 
 # target to preprocess a source file
-Authorization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i
-.PHONY : Authorization.cpp.i
+Auth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Auth.cpp.i
+.PHONY : Auth.cpp.i
 
-Authorization.s: Authorization.cpp.s
+Auth.s: Auth.cpp.s
 
-.PHONY : Authorization.s
+.PHONY : Auth.s
 
 # target to generate assembly for a file
-Authorization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s
-.PHONY : Authorization.cpp.s
+Auth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Traveller_s_App.dir\build.make CMakeFiles/Traveller_s_App.dir/Auth.cpp.s
+.PHONY : Auth.cpp.s
 
 Journey.obj: Journey.cpp.obj
 
@@ -285,9 +285,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Traveller_s_App
-	@echo ... Authorization.obj
-	@echo ... Authorization.i
-	@echo ... Authorization.s
+	@echo ... Auth.obj
+	@echo ... Auth.i
+	@echo ... Auth.s
 	@echo ... Journey.obj
 	@echo ... Journey.i
 	@echo ... Journey.s

@@ -101,18 +101,18 @@ CMakeFiles/Traveller_s_App.dir/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/User.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\User.cpp" -o CMakeFiles\Traveller_s_App.dir\User.cpp.s
 
-CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
-CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj: ../Authorization.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\Authorization.cpp.obj -c "E:\FMI\OOP\Traveller's_App\Authorization.cpp"
+CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
+CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj: ../Auth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\FMI\OOP\Traveller's_App\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Traveller_s_App.dir\Auth.cpp.obj -c "E:\FMI\OOP\Traveller's_App\Auth.cpp"
 
-CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/Authorization.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\Authorization.cpp" > CMakeFiles\Traveller_s_App.dir\Authorization.cpp.i
+CMakeFiles/Traveller_s_App.dir/Auth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Traveller_s_App.dir/Auth.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\FMI\OOP\Traveller's_App\Auth.cpp" > CMakeFiles\Traveller_s_App.dir\Auth.cpp.i
 
-CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/Authorization.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\Authorization.cpp" -o CMakeFiles\Traveller_s_App.dir\Authorization.cpp.s
+CMakeFiles/Traveller_s_App.dir/Auth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Traveller_s_App.dir/Auth.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\FMI\OOP\Traveller's_App\Auth.cpp" -o CMakeFiles\Traveller_s_App.dir\Auth.cpp.s
 
 CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: CMakeFiles/Traveller_s_App.dir/flags.make
 CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj: ../Journey.cpp
@@ -144,7 +144,7 @@ CMakeFiles/Traveller_s_App.dir/String.cpp.s: cmake_force
 Traveller_s_App_OBJECTS = \
 "CMakeFiles/Traveller_s_App.dir/main.cpp.obj" \
 "CMakeFiles/Traveller_s_App.dir/User.cpp.obj" \
-"CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj" \
+"CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj" \
 "CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj" \
 "CMakeFiles/Traveller_s_App.dir/String.cpp.obj"
 
@@ -153,7 +153,7 @@ Traveller_s_App_EXTERNAL_OBJECTS =
 
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/main.cpp.obj
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/User.cpp.obj
-Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj
+Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/String.cpp.obj
 Traveller_s_App.exe: CMakeFiles/Traveller_s_App.dir/build.make

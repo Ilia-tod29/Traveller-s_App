@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Traveller_s_App.dir/Authorization.cpp.obj"
+  "CMakeFiles/Traveller_s_App.dir/Auth.cpp.obj"
   "CMakeFiles/Traveller_s_App.dir/Journey.cpp.obj"
   "CMakeFiles/Traveller_s_App.dir/String.cpp.obj"
   "CMakeFiles/Traveller_s_App.dir/User.cpp.obj"

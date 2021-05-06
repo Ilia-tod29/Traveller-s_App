@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Authorization.cpp">
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Auth.cpp">
 			<Option target="Traveller_s_App"/>
 		</Unit>
-		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Authorization.h">
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Auth.h">
 			<Option target="Traveller_s_App"/>
 		</Unit>
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Journey.cpp">

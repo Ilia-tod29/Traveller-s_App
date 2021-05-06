@@ -22,7 +22,7 @@ struct TimePeriod {
 
 class Journey {
 public:
-    void setDestionation(const String& _destination);
+    void setDestination(const String& _destination);
 
     void setTimePeriod(const String& _timePeriod); // VALIDATION!
 
@@ -35,6 +35,8 @@ public:
     String getTown();
 
     String getCountry();
+
+    void display();
 private:
     String destination;
     String timePeriod;
