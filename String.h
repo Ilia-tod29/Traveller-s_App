@@ -40,6 +40,10 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const String& str);
 
+    friend std::istream& operator>>(std::istream& is, String& str);
+
+    friend std::istream& getline (std::istream& stream, String& str, const char& end);
+
     ~String();
 private:
     char* str;

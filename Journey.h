@@ -28,9 +28,15 @@ public:
 
     void setGrade(const size_t& _grade); // VALIDATION!
 
+    void setGrade(const String& _grade); // VALIDATION!
+
     void setComment(const String& _comment);
 
     void addPhoto(const String& _photo); // VALIDATION!
+
+    void setAndSeparatePhotos(const String& _photos); // VALIDATION!
+
+    size_t getGrade () {return this->grade;}
 
     String getTown();
 

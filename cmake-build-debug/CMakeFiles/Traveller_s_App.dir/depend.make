@@ -23,6 +23,7 @@ CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../User.h
 CMakeFiles/Traveller_s_App.dir/User.cpp.obj: ../Vector.h
 
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Auth.h
+CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Interface.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Journey.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../String.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../User.h

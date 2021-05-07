@@ -86,6 +86,9 @@
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Auth.h">
 			<Option target="Traveller_s_App"/>
 		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Interface.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/Journey.cpp">
 			<Option target="Traveller_s_App"/>
 		</Unit>

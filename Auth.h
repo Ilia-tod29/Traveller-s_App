@@ -20,19 +20,13 @@ public:
 
     // The ID is auto-counted int the main
     // Could be changed - username and password to be from data members
-    User signUp(const int& _id, const String& _username, const String& _password, const String& _eMail);
+    User signUp(const int& _id, const String& _eMail);
 
 private:
     String username;
     String password;
 };
 
-//namespace Auth {
-//    User logIn() {
-//
-//    }
-//
-//}
 
 
 

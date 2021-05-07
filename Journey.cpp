@@ -71,7 +71,6 @@ void Journey::setTimePeriod(const String &_timePeriod) {
     bool dateValidation = isDateValid(startMonth, startDay, startYear) && isDateValid(endMonth, endDay, endYear);
     if (periodValidation && dateValidation) {
         this->timePeriod = _timePeriod;
-        std::cout << this->timePeriod << "\n";
     }
     else {
         std::cout << "Invalid time period or date! \n";
@@ -81,6 +80,21 @@ void Journey::setTimePeriod(const String &_timePeriod) {
 void Journey::setGrade(const size_t &_grade) {
     if (_grade >= 1 && _grade <= 5) {
         this->grade = _grade;
+    }
+    else {
+        std::cout << "Invalid grade! \n";
+    }
+}
+
+void Journey::setGrade(const String &_grade) {
+    if(_grade.length() == 1) {
+        size_t grade = (size_t)_grade.getData()[0] - 48;
+        if (grade >= 1 && grade <= 5) {
+            this->grade = grade;
+        }
+        else {
+            std::cout << "Invalid grade! \n";
+        }
     }
     else {
         std::cout << "Invalid grade! \n";
@@ -102,11 +116,22 @@ void Journey::addPhoto(const String &_photo) {
 
     if(i == name.length() && i != 0 && (extension == validExtension || extension == validExtension1)) {
         this->photos.pushBack(_photo);
-        this->photos.print();
     }
     else {
         std::cout << "Invalid image format or name! \n";
     }
+}
+
+void Journey::setAndSeparatePhotos(const String &_photos) {
+    String ph = _photos;
+    while(ph.length() != 0) {
+        this->addPhoto(ph.leftPart(','));
+        if (ph == ph.rightPart(',')) {
+            break;
+        }
+        ph = ph.rightPart(',');
+    }
+
 }
 
 String Journey::getTown() {

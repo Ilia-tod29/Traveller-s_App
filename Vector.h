@@ -161,7 +161,7 @@ Vector<T> &Vector<T>::operator=(const Vector &other) {
 
 template<typename T>
 Vector<T>::~Vector() {
-    std::cout << "Destructor is being called" << std::endl;
+//    std::cout << "Destructor is being called" << std::endl;
     destructAndDeleteRange(this->data, this->data + this->size);
 }
 

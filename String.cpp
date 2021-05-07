@@ -49,7 +49,7 @@ char * String::getData() const {
 //Possible issues
 String String::operator+(const String &other) {
     String tempStr;
-    tempStr.size = this->size + other.size - 1;
+    tempStr.size = this->size + other.size;
     tempStr.str = new char[tempStr.size];
     for (int i = 0; i < this->size; ++i) {
         tempStr.str[i] = this->str[i];
@@ -162,4 +162,32 @@ std::ostream& operator<<(std::ostream& os, const String& str) {
         os << str.str[i];
     }
     return os;
+}
+
+std::istream& operator>>(std::istream& is, String& str) {
+
+    delete[] str.str;
+    char* container = new char[200];
+
+    is.getline(container, 200);
+    str.size = strlen(container);
+    str.str = new char[str.size + 1];
+    strcpy(str.str, container);
+
+    return is;
+}
+
+std::istream& getline(std::istream& stream, String& str, const char& end)
+{
+    char ch;
+    size_t i = 0;
+    delete[] str.str;
+    str.str = new char[200];
+    while (stream.get(ch) && ch != end) {
+        str.str[i] = ch;
+        i++;
+    }
+    str.str[i] = '\0';
+    str.size = i;
+    return stream;
 }

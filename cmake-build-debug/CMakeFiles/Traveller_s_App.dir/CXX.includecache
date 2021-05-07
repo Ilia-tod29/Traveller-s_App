@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-E:/FMI/OOP/Traveller's_App/Auth.cpp
-Auth.h
-E:/FMI/OOP/Traveller's_App/Auth.h
-
 E:/FMI/OOP/Traveller's_App/Auth.h
 iostream
 -
@@ -19,6 +15,14 @@ String.h
 E:/FMI/OOP/Traveller's_App/String.h
 Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
+
+E:/FMI/OOP/Traveller's_App/Interface.h
+iostream
+-
+fstream
+-
+Auth.h
+E:/FMI/OOP/Traveller's_App/Auth.h
 
 E:/FMI/OOP/Traveller's_App/Journey.h
 iostream
@@ -33,10 +37,6 @@ E:/FMI/OOP/Traveller's_App/Vector.h
 E:/FMI/OOP/Traveller's_App/String.h
 iostream
 -
-
-E:/FMI/OOP/Traveller's_App/User.cpp
-User.h
-E:/FMI/OOP/Traveller's_App/User.h
 
 E:/FMI/OOP/Traveller's_App/User.h
 iostream
@@ -67,4 +67,6 @@ User.h
 E:/FMI/OOP/Traveller's_App/User.h
 Auth.h
 E:/FMI/OOP/Traveller's_App/Auth.h
+Interface.h
+E:/FMI/OOP/Traveller's_App/Interface.h
 
