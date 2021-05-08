@@ -36,13 +36,21 @@ public:
 
     void setAndSeparatePhotos(const String& _photos); // VALIDATION!
 
-    size_t getGrade () {return this->grade;}
+    String getDestination() const;
 
-    String getTown();
+    String getTimePeriod() const;
 
-    String getCountry();
+    size_t getGrade () const;
 
-    void display();
+    String getComment() const;
+
+    String getPhotos() const;
+
+    String getTown() const;
+
+    String getCountry() const;
+
+    void display() const;
 private:
     String destination;
     String timePeriod;

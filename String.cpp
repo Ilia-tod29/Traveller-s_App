@@ -153,6 +153,19 @@ String String::rightPart(const char &separator) const {
     return result;
 }
 
+size_t String::toInt() const {
+    size_t temp = 0;
+    for (int i = 0; i < this->size; ++i) {
+        if(!(this->str[i] >= '0' && this->str[i] <= '9')) {
+            return 0;
+        }
+        temp += ((size_t)this->str[i] - 48);
+        temp *= 10;
+    }
+    temp /= 10;
+    return temp;
+}
+
 String::~String() {
     vanish();
 }

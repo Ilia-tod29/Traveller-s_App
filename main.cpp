@@ -85,15 +85,15 @@ int main() {
     jo.addPhoto("Argaz.png");
     jo.setAndSeparatePhotos("burgas.jpeg,locumfest.png,sunrise_on_the_coast.jpeg");
 
-    jo.display();
+    std::cout << jo.getPhotos() << "\n";
 
     User ilia, Vili;
     Vili.setAuth(1, "Vili", "Vili123", "Vilia@abv.bg");
     ilia.setAuth(0, "Ilia", "0000ilia6", "ilia8888@abv.bg");
-    ilia.setFriend(&Vili);
-//    ilia.setJourney(jo);
+    ilia.addFriend(&Vili);
+    ilia.setJourney(jo);
 //    ilia.showFriends();
-    Vili.setFriend(&ilia);
+    Vili.addFriend(&ilia);
 //    Vili.showFriends();
 //
 //    std::cout << Vili.getId() << "\n";
@@ -147,10 +147,23 @@ int main() {
 
 
 
-    interface::userSetUp(ilia);
-    for (int i = 0; i < ilia.getJourneys().getSize(); ++i) {
-        ilia.getJourneys()[i].display();
-    }
+//    interface::userSetUp(ilia);
+//    for (int i = 0; i < ilia.getJourneys().getSize(); ++i) {
+//        ilia.getJourneys()[i].display();
+//    }
+//
+//    String s1("77");
+//    std::cout << s1.toInt() << "\n";
+//
+    User Ragnar;
+    Ragnar = interface::signUp(0);
+//    interface::pushUserToDB(Ragnar);
+    Ragnar.setJourney(jo);
+//    interface::pushJourneyToDB(jo, Ragnar);
+    Ragnar.addFriend(&ilia);
+    Ragnar.addFriend(&Vili);
+    Vector<User> us1 = Ragnar.friendsVisitedADestination("Burgas", " Bulgaria");
+    std::cout << us1.getSize() << "\n";
 
 
 

@@ -23,7 +23,7 @@ public:
     void setAuth(const int& _id, const String& _username, const String& _password, const String& _eMail);
 
 
-    void setFriend(User* newFriend);
+    void addFriend(User* newFriend);
 
     void setJourney(const Journey& newJourney);
 
@@ -37,6 +37,8 @@ public:
 
     Vector<Journey> getJourneys() const;
 
+    Vector<User*> getFriends() const;
+
     Vector<User> friendsVisitedADestination(const String& town, const String& country) const;
 
     bool operator==(const User& other) const;
@@ -46,11 +48,10 @@ private:
     int id;
     String username;
     String eMail;
+    String password;
 
     Vector<User*> friends;
     Vector<Journey> journeys;
-protected:
-    String password;
 };
 
 

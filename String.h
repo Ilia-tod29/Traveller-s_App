@@ -38,6 +38,8 @@ public:
 
     String rightPart(const char& separator) const;
 
+    size_t toInt() const;
+
     friend std::ostream& operator<<(std::ostream& os, const String& str);
 
     friend std::istream& operator>>(std::istream& is, String& str);

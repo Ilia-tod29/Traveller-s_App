@@ -134,15 +134,44 @@ void Journey::setAndSeparatePhotos(const String &_photos) {
 
 }
 
-String Journey::getTown() {
+String Journey::getDestination() const {
+    return this->destination;
+}
+
+String Journey::getTimePeriod() const {
+    return this->timePeriod;
+}
+
+size_t Journey::getGrade() const {
+    return this->grade;
+}
+
+String Journey::getComment() const {
+    return this->comment;
+}
+
+String Journey::getPhotos() const {
+    String allPhotos;
+    for (int i = 0; i < this->photos.getSize(); ++i) {
+        if(i != this->photos.getSize() - 1) {
+            allPhotos += (this->photos[i] + ",");
+        }
+        else {
+            allPhotos += this->photos[i];
+        }
+    }
+    return allPhotos;
+}
+
+String Journey::getTown() const {
     return this->destination.leftPart(',');
 }
 
-String Journey::getCountry() {
+String Journey::getCountry() const {
     return this->destination.rightPart(',');
 }
 
-void Journey::display() {
+void Journey::display() const {
     std::cout << "Destination: " << this->destination << "\n";
     std::cout << "Time period: " << this->timePeriod << "\n";
     std::cout << "Grade: " << this->grade << "\n";

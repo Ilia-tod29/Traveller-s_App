@@ -21,9 +21,11 @@ void User::operator=(const User &other) {
     this->journeys = other.journeys;
 }
 
-void User::setFriend(User *newFriend) {
+void User::addFriend(User *newFriend) {
     this->friends.pushBack(newFriend);
 }
+
+
 
 void User::setJourney(const Journey &newJourney) {
     this->journeys.pushBack(newJourney);
@@ -47,6 +49,10 @@ String User::getEMail() const {
 
 Vector<Journey> User::getJourneys() const {
     return this->journeys;
+}
+
+Vector<User*> User::getFriends() const {
+    return this->friends;
 }
 
 
