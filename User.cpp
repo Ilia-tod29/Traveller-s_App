@@ -63,6 +63,7 @@ Vector<User> User::friendsVisitedADestination(const String &town, const String &
         for (int j = 0; j < this->friends.getData()[i]->getJourneys().getSize(); ++j) {
             if (this->friends.getData()[i]->getJourneys().getData()[j].getTown() == town && this->friends.getData()[i]->getJourneys().getData()[j].getCountry() == country) {
                 friendsVisited.pushBack(*this->friends[i]);
+                break;
             }
         }
     }
@@ -76,5 +77,18 @@ bool User::operator==(const User &other) const {
 void User::showFriends() const {
     for (int i = 0; i < this->friends.getSize(); ++i) {
         std::cout << this->friends[i]->getUsername() << "\n";
+    }
+}
+
+void User::clear() {
+    this->id = -1;
+    this->username = "";
+    this->password = "";
+    this->eMail = "";
+    for (int i = 0; i < this->friends.getSize(); ++i) {
+        this->friends.popBack();
+    }
+    for (int i = 0; i < this->journeys.getSize(); ++i) {
+        this->journeys.popBack();
     }
 }

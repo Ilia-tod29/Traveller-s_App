@@ -10,15 +10,6 @@
 #include "String.h"
 #include "Vector.h"
 
-struct Destination {
-    String town;
-    String country;
-};
-
-struct TimePeriod {
-    String startDate;
-    String endDate;
-};
 
 class Journey {
 public:

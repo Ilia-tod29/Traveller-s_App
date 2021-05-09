@@ -10,7 +10,6 @@ User Auth::logIn(const Vector<User> &allUsers) const {
     User userAuth;
     bool flag = false;
     for (int i = 0; i < allUsers.getSize(); ++i) {
-//        std::cout << "HI \n";
         if(allUsers[i].getUsername() == this->username && allUsers[i].getPassword() == this->password) {
             userAuth = allUsers[i];
             flag = true;
@@ -22,7 +21,7 @@ User Auth::logIn(const Vector<User> &allUsers) const {
     }
     // Otherwise returns user initialized with id of (-1);
     else {
-        std::cout << "Incorrect username ot password! \n";
+        std::cout << "Incorrect username or password! \n";
         return userAuth;
     }
 }

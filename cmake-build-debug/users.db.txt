@@ -1,4 +1,6 @@
-0|Ragnar|0000Ragnar|Ragnar@abv.bg
-0|NewRagnar|0002RRR|RRR@abv.bg
-0|Ragnar |Ragnar123|Ragnar@abv.bg
-0|Ragnar |Ragnar1234|rrr@abv.bg
+0|user1|00000000|User1@abv.bg
+1|user2|88888888|user2@abv.bg
+2|user3|88888888|user3@abv.bg
+3|user4|88888888|user4@gmail.com
+4|user5|88888888|user5@yahoo.com
+5|Ilia|88888888|Ilia8888@abv.bg

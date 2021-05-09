@@ -66,7 +66,6 @@ void Journey::setTimePeriod(const String &_timePeriod) {
     endMonth = getDateLength(16, 17, _timePeriod.getExact(16, 17));
     endDay = getDateLength(19, 20, _timePeriod.getExact(19, 20));
 
-    std::cout << startYear << " " << startMonth << " " << startDay << " " << endYear << " " << endMonth << " " << endDay << " " << "\n";
     bool periodValidation = (startYear < endYear) || (startYear == endYear && ((startMonth < endMonth) || (startMonth == endMonth && startDay < endDay)));
     bool dateValidation = isDateValid(startMonth, startDay, startYear) && isDateValid(endMonth, endDay, endYear);
     if (periodValidation && dateValidation) {

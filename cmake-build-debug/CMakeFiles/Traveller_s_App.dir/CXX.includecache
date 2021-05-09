@@ -21,6 +21,14 @@ iostream
 -
 fstream
 -
+cmath
+-
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+Vector.h
+E:/FMI/OOP/Traveller's_App/Vector.h
+User.h
+E:/FMI/OOP/Traveller's_App/User.h
 Auth.h
 E:/FMI/OOP/Traveller's_App/Auth.h
 Journey.h
@@ -57,8 +65,6 @@ cstddef
 E:/FMI/OOP/Traveller's_App/main.cpp
 iostream
 -
-stdlib.h
--
 Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
 String.h
@@ -67,8 +73,6 @@ Journey.h
 E:/FMI/OOP/Traveller's_App/Journey.h
 User.h
 E:/FMI/OOP/Traveller's_App/User.h
-Auth.h
-E:/FMI/OOP/Traveller's_App/Auth.h
 Interface.h
 E:/FMI/OOP/Traveller's_App/Interface.h
 

@@ -3,6 +3,26 @@
 //
 #include "String.h"
 #include <cstring>
+
+size_t removeSpacesFromData(char* s)
+{
+    size_t removed = 0;
+    char* cpy = s;
+    char* temp = s;
+
+    while (*cpy)
+    {
+        if (*cpy != ' ') {
+            *temp++ = *cpy;
+            removed++;
+        }
+        cpy++;
+    }
+    *temp = 0;
+    return removed;
+}
+
+
 void String::cpy(const String& other) {
     this->size = other.size;
     this->str = new char[strlen(other.str) + 1];
@@ -46,7 +66,6 @@ char * String::getData() const {
     return this->str;
 }
 
-//Possible issues
 String String::operator+(const String &other) {
     String tempStr;
     tempStr.size = this->size + other.size;
@@ -76,6 +95,10 @@ bool String::operator==(const String &other) {
         return false;
     }
     return false;
+}
+
+bool String::operator!=(const String &other) {
+    return !(*this == other);
 }
 
 String & String::operator+=(const String &other) {
@@ -182,10 +205,12 @@ std::istream& operator>>(std::istream& is, String& str) {
     delete[] str.str;
     char* container = new char[200];
 
+//    is.ignore();
     is.getline(container, 200);
     str.size = strlen(container);
     str.str = new char[str.size + 1];
     strcpy(str.str, container);
+//    str.str[str.size + 1] = '\0';
 
     return is;
 }

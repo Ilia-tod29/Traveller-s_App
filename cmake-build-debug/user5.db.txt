@@ -1,0 +1,4 @@
+Pleven, Bulgaria|2020-03-20/2020-04-20|4|Ok for livig|Pleven.png,roses.jpeg
+Pernik, Bulgaria|2020-04-20/2020-05-29|2|Be careful|Pernik.png,truba.jpeg
+Paris, France|2020-06-04/2020-06-15|5|Fall in love with a girl|paris.png,mime.jpeg
+Sofia, Bulgaria|2021-01-15/2021-02-20|5|Bit cold, but great night life|Sofia.png,sf.jpeg

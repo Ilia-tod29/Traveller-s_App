@@ -14,14 +14,13 @@
 
 class User {
 public:
-    User() : id(-1) {};
+    User() : id(-1), username(""), password(""), eMail("") {};
 
     void operator=(const User& other);
 
     // Constructor with parameters(not all data members are set here)
     // The ID is auto-counted int the main
     void setAuth(const int& _id, const String& _username, const String& _password, const String& _eMail);
-
 
     void addFriend(User* newFriend);
 
@@ -44,6 +43,8 @@ public:
     bool operator==(const User& other) const;
 
     void showFriends() const;
+
+    void clear();
 private:
     int id;
     String username;

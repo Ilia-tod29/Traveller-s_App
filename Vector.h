@@ -34,9 +34,6 @@ public:
         return this->data[index];
     }
 
-//    T &operator[](size_t index) {
-//        return this->data[index];
-//    }
 
     size_t getSize() const {
         return this->size;
@@ -145,7 +142,6 @@ Vector<T>::Vector(const Vector &other) :
 
 template<typename T>
 Vector<T> &Vector<T>::operator=(const Vector &other) {
-    std::cout << "Copy assigment operator is being called" << std::endl;
     if (this == &other) {
         return *this;
     }

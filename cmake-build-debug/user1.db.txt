@@ -1,0 +1,4 @@
+Pleven, Bulgaria|2020-03-20/2020-04-20|4|Great city for rest!|Pleven.png,roses.jpeg
+Pernik, Bulgaria|2020-04-20/2020-05-29|2|Be careful|Pernik.png,truba.jpeg
+Paris, France|2020-06-04/2020-06-15|5|Fall in love with the food there.|paris.png,mime.jpeg
+Perushtica, Bulgaria|2021-03-25/2021-04-01|5|Great and quiet place!|perushtica.png
