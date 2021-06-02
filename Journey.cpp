@@ -130,22 +130,13 @@ void Journey::setComment(const String &_comment) {
 void Journey::addPhoto(const String &_photo) {
     size_t i = 0;
     String name = _photo.leftPart('.');
-    std::cout <<"21" << std::endl;
     String extension = _photo.rightPart('.');
-    std::cout <<"22" << std::endl;
-//    String validExtension("jpeg"), validExtension1("png");
-    std::cout <<"23" << std::endl;
     while ((name.getData()[i] >= 'A' && name.getData()[i] <= 'Z') || (name.getData()[i] >= 'a' && name.getData()[i] <= 'z') || name.getData()[i] == '_') {
         i++;
     }
 
-    std::cout <<"24" << std::endl;
-    std::cout <<extension << std::endl;
     if(i == name.length() && i != 0 && (extension == "jpeg" || extension == "png")) {
-        std::cout <<"25" << std::endl;
         this->photos.pushBack(_photo);
-        this->photos.print();
-        std::cout <<"26" << std::endl;
     }
     else {
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -158,16 +149,11 @@ void Journey::addPhoto(const String &_photo) {
 void Journey::setAndSeparatePhotos(const String &_photos) {
     String ph = _photos;
     while(ph.length() != 0) {
-        std::cout <<"1" << std::endl;
-        std::cout << ph.leftPart(',') << std::endl;
         this->addPhoto(ph.leftPart(','));
-        std::cout <<"2" << std::endl;
         if (ph == ph.rightPart(',')) {
-            std::cout <<"." << std::endl;
             break;
         }
         ph = ph.rightPart(',');
-        std::cout << ph << std::endl;
     }
 
 }

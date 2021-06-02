@@ -72,7 +72,6 @@ namespace myInterface {
             }
             usersDB.close();
         } else {
-//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
             SetConsoleTextAttribute(hConsole, 7);
@@ -115,7 +114,6 @@ namespace myInterface {
                         << currJourney.getGrade() << "|" << currJourney.getComment() << "|" << currJourney.getPhotos();
             pushJourney.close();
         } else {
-//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
             SetConsoleTextAttribute(hConsole, 7);
@@ -128,58 +126,36 @@ namespace myInterface {
 
     //TODO finish the function with setting the friends
     void userSetUp(User &currUser) {
-//        std::cout << "a" << "\n";
         String extension(".db.txt");
-//        std::cout << "b" << "\n";
         String file = currUser.getUsername() + extension;
-//        std::cout << "c" << "\n";
         String _destination, _timePeriod, _grade, _comment, _photos;
 
-//        std::cout << "d" << "\n";
         std::ifstream userDB(file.getData());
 
         if (userDB.is_open()) {
-//            std::cout << "e" << "\n";
             if (!is_empty(userDB)) {
                 while (!userDB.eof()) {
-//                    std::cout << "---------------------" << "\n";
-//                    std::cout << "f" << "\n";
                     Journey newJourney;
-//                    std::cout << "g" << "\n";
                     getline(userDB, _destination, '|');
-//                    std::cout << _destination << "\n";
                     newJourney.setDestination(_destination);
 
-//                    std::cout << "i" << "\n";
                     getline(userDB, _timePeriod, '|');
-//                    std::cout << _timePeriod << "\n";
                     newJourney.setTimePeriod(_timePeriod);
 
-//                    std::cout << "k" << "\n";
                     getline(userDB, _grade, '|');
-//                    std::cout << _grade << "\n";
                     newJourney.setGrade(_grade);
 
-//                    std::cout << "m" << "\n";
                     getline(userDB, _comment, '|');
-//                    std::cout << _comment << "\n";
                     newJourney.setComment(_comment);
 
-//                    std::cout << "o" << "\n";
                     getline(userDB, _photos, '\n');
-//                    std::cout << "p" << "\n";
-//                    std::cout << _photos << "\n";
                     newJourney.setAndSeparatePhotos(_photos);
 
-                    newJourney.display();
                     currUser.setJourney(newJourney);
                 }
             }
-//            std::cout << "r" << "\n";
             userDB.close();
         } else {
-//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-//            std::cout << "s" << "\n";
             SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file: " << file << "\n";
             SetConsoleTextAttribute(hConsole, 7);
@@ -234,12 +210,12 @@ namespace myInterface {
         std::cout << "Country: ";
         std::cin >> Country;
 
+        std::cout << "---------------------------\n";
+
         Vector<User> tempUsers = currUser.friendsVisitedADestination(Town, Country);
         if (tempUsers.getSize() > 0) {
             for (int i = 0; i < tempUsers.getSize(); ++i) {
                 for (int j = 0; j < tempUsers[i].getJourneys().getSize(); ++j) {
-//                    std::cout << tempUsers[i].getJourneys()[j].getTown()
-//                                << "|" << tempUsers[i].getJourneys()[j].getCountry() << std::endl;
                     if (tempUsers[i].getJourneys()[j].getTown() == Town &&
                         tempUsers[i].getJourneys()[j].getCountry() == Country) {
                         std::cout << tempUsers[i].getUsername() << ": " << tempUsers[i].getJourneys()[j].getComment()
@@ -248,7 +224,6 @@ namespace myInterface {
                 }
             }
         } else {
-//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 4);
             std::cout << "No friends visited this destination.\n";
             SetConsoleTextAttribute(hConsole, 7);

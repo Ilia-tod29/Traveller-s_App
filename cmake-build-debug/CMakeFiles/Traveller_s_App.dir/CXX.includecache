@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-E:/FMI/OOP/Traveller's_App/Auth.cpp
-Auth.h
-E:/FMI/OOP/Traveller's_App/Auth.h
-
 E:/FMI/OOP/Traveller's_App/Auth.h
 iostream
 -
@@ -21,6 +17,26 @@ String.h
 E:/FMI/OOP/Traveller's_App/String.h
 Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
+
+E:/FMI/OOP/Traveller's_App/Interface.h
+iostream
+-
+windows.h
+-
+fstream
+-
+cmath
+-
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+Vector.h
+E:/FMI/OOP/Traveller's_App/Vector.h
+User.h
+E:/FMI/OOP/Traveller's_App/User.h
+Auth.h
+E:/FMI/OOP/Traveller's_App/Auth.h
+Journey.h
+E:/FMI/OOP/Traveller's_App/Journey.h
 
 E:/FMI/OOP/Traveller's_App/Journey.h
 iostream
@@ -51,4 +67,24 @@ E:/FMI/OOP/Traveller's_App/Journey.h
 E:/FMI/OOP/Traveller's_App/Vector.h
 cstddef
 -
+
+E:/FMI/OOP/Traveller's_App/main.cpp
+iostream
+-
+windows.h
+-
+regex
+-
+Vector.h
+E:/FMI/OOP/Traveller's_App/Vector.h
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+Journey.h
+E:/FMI/OOP/Traveller's_App/Journey.h
+User.h
+E:/FMI/OOP/Traveller's_App/User.h
+Auth.h
+E:/FMI/OOP/Traveller's_App/Auth.h
+Interface.h
+E:/FMI/OOP/Traveller's_App/Interface.h
 
