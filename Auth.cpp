@@ -6,6 +6,16 @@
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+bool is_email_valid(const String& email)
+{
+    // define a regular expression
+    const std::regex pattern ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+
+    // try to match the string with the regular expression
+    return std::regex_match(email.getData(), pattern);
+}
+
+
 Auth::Auth(const String &_username, const String &_password) : username(_username), password(_password) {}
 
 User Auth::logIn(const Vector<User> &allUsers) const {
@@ -24,7 +34,7 @@ User Auth::logIn(const Vector<User> &allUsers) const {
     // Otherwise returns user initialized with id of (-1);
     else {
         SetConsoleTextAttribute(hConsole, 4);
-        std::cout << "Incorrect username or password! \n";
+        std::cout << "Incorrect username or password!\n";
         SetConsoleTextAttribute(hConsole, 7);
         return userAuth;
     }
@@ -32,6 +42,15 @@ User Auth::logIn(const Vector<User> &allUsers) const {
 
 User Auth::signUp(const int &_id, const String &_eMail) {
     User newUser;
-    newUser.setAuth(_id, this->username, this->password, _eMail);
-    return newUser;
+    if(is_email_valid(_eMail)) {
+        newUser.setAuth(_id, this->username, this->password, _eMail);
+        return newUser;
+    }
+    else {
+        SetConsoleTextAttribute(hConsole, 4);
+        std::cout << "Invalid eMail format!\n";
+        SetConsoleTextAttribute(hConsole, 7);
+        newUser.setAuth(-1, "", "", "");
+        return newUser;
+    }
 }

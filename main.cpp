@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <regex>
 
 #include "Vector.h"
 #include "String.h"
@@ -159,9 +160,12 @@ int main() {
             }
             else if (command == "2") {
                 currentUser = myInterface::signUp(currentId);
-                currentId++;
-                myInterface::pushUserToDB(currentUser);
-                isLoggedIn = true;
+
+                if(currentUser.getId() != -1) {
+                    currentId++;
+                    myInterface::pushUserToDB(currentUser);
+                    isLoggedIn = true;
+                }
             }
             else if (command == "3") {
 //                std::cout << "13" << "\n";
@@ -189,6 +193,7 @@ int main() {
             }
         }
     }
+
 
 
 //    SetConsoleTextAttribute(hConsole, 4);

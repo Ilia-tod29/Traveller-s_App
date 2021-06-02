@@ -6,6 +6,8 @@
 #define TRAVELLER_S_APP_AUTH_H
 
 #include <iostream>
+#include <regex>
+
 #include "User.h"
 #include "String.h"
 #include "Vector.h"
