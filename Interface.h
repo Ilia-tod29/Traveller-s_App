@@ -6,6 +6,7 @@
 #define TRAVELLER_S_APP_INTERFACE_H
 
 #include <iostream>
+#include <windows.h>
 #include <fstream>
 #include <cmath>
 
@@ -16,8 +17,8 @@
 #include "Journey.h"
 
 
-
-namespace interface {
+namespace myInterface {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     void commands() {
         std::cout << ">1: Log in.\n";
         std::cout << ">2: Sign up.\n";
@@ -47,7 +48,10 @@ namespace interface {
             std::ofstream pushJourney(DB.getData());
             pushJourney.close();
         } else {
+//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
     }
 
@@ -68,7 +72,10 @@ namespace interface {
             }
             usersDB.close();
         } else {
+//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
     }
 
@@ -108,7 +115,10 @@ namespace interface {
                         << currJourney.getGrade() << "|" << currJourney.getComment() << "|" << currJourney.getPhotos();
             pushJourney.close();
         } else {
+//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
     };
 
@@ -118,37 +128,61 @@ namespace interface {
 
     //TODO finish the function with setting the friends
     void userSetUp(User &currUser) {
+//        std::cout << "a" << "\n";
         String extension(".db.txt");
+//        std::cout << "b" << "\n";
         String file = currUser.getUsername() + extension;
+//        std::cout << "c" << "\n";
         String _destination, _timePeriod, _grade, _comment, _photos;
 
+//        std::cout << "d" << "\n";
         std::ifstream userDB(file.getData());
 
         if (userDB.is_open()) {
+//            std::cout << "e" << "\n";
             if (!is_empty(userDB)) {
                 while (!userDB.eof()) {
+//                    std::cout << "---------------------" << "\n";
+//                    std::cout << "f" << "\n";
                     Journey newJourney;
+//                    std::cout << "g" << "\n";
                     getline(userDB, _destination, '|');
+//                    std::cout << _destination << "\n";
                     newJourney.setDestination(_destination);
 
+//                    std::cout << "i" << "\n";
                     getline(userDB, _timePeriod, '|');
+//                    std::cout << _timePeriod << "\n";
                     newJourney.setTimePeriod(_timePeriod);
 
+//                    std::cout << "k" << "\n";
                     getline(userDB, _grade, '|');
+//                    std::cout << _grade << "\n";
                     newJourney.setGrade(_grade);
 
+//                    std::cout << "m" << "\n";
                     getline(userDB, _comment, '|');
+//                    std::cout << _comment << "\n";
                     newJourney.setComment(_comment);
 
+//                    std::cout << "o" << "\n";
                     getline(userDB, _photos, '\n');
+//                    std::cout << "p" << "\n";
+//                    std::cout << _photos << "\n";
                     newJourney.setAndSeparatePhotos(_photos);
 
+                    newJourney.display();
                     currUser.setJourney(newJourney);
                 }
             }
+//            std::cout << "r" << "\n";
             userDB.close();
         } else {
+//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+//            std::cout << "s" << "\n";
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file: " << file << "\n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
     }
 
@@ -182,17 +216,17 @@ namespace interface {
         return signup.signUp(id, eMail);
     };
 
-
-    void allDestinations(const Vector<User> &allUsers) {
-        std::cout << "We have information about these destinations:\n";
-        for (int i = 0; i < allUsers.getSize(); ++i) {
-            for (int j = 0; j < allUsers[i].getJourneys().getSize(); ++j) {
-                std::cout << allUsers[i].getJourneys()[j].getDestination() << "\n";
-            }
+    void showFriends(const User& currentUser) {
+        std::cout << "---------------------------\n";
+        std::cout << "Your friends:\n";
+        for (int i = 0; i < currentUser.getFriends().getSize(); ++i) {
+            std::cout << currentUser.getFriends()[i]->getUsername() << "\n";
         }
+        std::cout << "---------------------------\n";
     }
 
     void getFriendsReview(const User &currUser) {
+        std::cout << "---------------------------\n";
         String Town, Country;
         std::cout << "Enter your wished destination:\n";
         std::cout << "Town: ";
@@ -204,6 +238,8 @@ namespace interface {
         if (tempUsers.getSize() > 0) {
             for (int i = 0; i < tempUsers.getSize(); ++i) {
                 for (int j = 0; j < tempUsers[i].getJourneys().getSize(); ++j) {
+//                    std::cout << tempUsers[i].getJourneys()[j].getTown()
+//                                << "|" << tempUsers[i].getJourneys()[j].getCountry() << std::endl;
                     if (tempUsers[i].getJourneys()[j].getTown() == Town &&
                         tempUsers[i].getJourneys()[j].getCountry() == Country) {
                         std::cout << tempUsers[i].getUsername() << ": " << tempUsers[i].getJourneys()[j].getComment()
@@ -212,11 +248,16 @@ namespace interface {
                 }
             }
         } else {
+//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "No friends visited this destination.\n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
+        std::cout << "---------------------------\n";
     }
 
     void getGrades(const Vector<User> &allUsers) {
+        std::cout << "---------------------------\n";
         String Town, Country;
         std::cout << "Enter your wished destination:\n";
         std::cout << "Town: ";
@@ -236,19 +277,32 @@ namespace interface {
         }
         std::cout << "Average for this destination: "
                   << std::ceil(((float) sumGrades / (float) counter) * 100.0) / 100.0 << "\n";
+        std::cout << "---------------------------\n";
     }
 
     void getAllDestinations(const Vector<User> &allUsers) {
+        std::cout << "---------------------------\n";
         Vector<String> destinations;
-        std::cout << "All destinations:\n";
+        Vector<int> positions;
         for (int i = 0; i < allUsers.getSize(); ++i) {
             for (int j = 0; j < allUsers[i].getJourneys().getSize(); ++j) {
                 destinations.pushBack(allUsers[i].getJourneys()[j].getDestination());
             }
         }
         for (int i = 0; i < destinations.getSize(); ++i) {
-            std::cout << destinations[i] << "\n";
+            for (int j = i + 1; j < destinations.getSize(); ++j) {
+                if (destinations[i] == destinations[j]) {
+                    positions.pushBack(j);
+                }
+            }
         }
+        std::cout << "All destinations:\n";
+        for (int i = 0; i < destinations.getSize(); ++i) {
+            if (!(positions.elem(i))) {
+                std::cout << "\t" << destinations[i] << "\n";
+            }
+        }
+        std::cout << "---------------------------\n";
     }
 }
 #endif //TRAVELLER_S_APP_INTERFACE_H

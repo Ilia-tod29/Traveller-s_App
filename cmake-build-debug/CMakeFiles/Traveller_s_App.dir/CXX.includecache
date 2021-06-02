@@ -19,6 +19,8 @@ E:/FMI/OOP/Traveller's_App/Vector.h
 E:/FMI/OOP/Traveller's_App/Interface.h
 iostream
 -
+windows.h
+-
 fstream
 -
 cmath
@@ -36,6 +38,8 @@ E:/FMI/OOP/Traveller's_App/Journey.h
 
 E:/FMI/OOP/Traveller's_App/Journey.h
 iostream
+-
+windows.h
 -
 time.h
 -
@@ -65,6 +69,8 @@ cstddef
 E:/FMI/OOP/Traveller's_App/main.cpp
 iostream
 -
+windows.h
+-
 Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
 String.h
@@ -73,6 +79,8 @@ Journey.h
 E:/FMI/OOP/Traveller's_App/Journey.h
 User.h
 E:/FMI/OOP/Traveller's_App/User.h
+Auth.h
+E:/FMI/OOP/Traveller's_App/Auth.h
 Interface.h
 E:/FMI/OOP/Traveller's_App/Interface.h
 

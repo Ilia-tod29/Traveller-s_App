@@ -4,6 +4,8 @@
 
 #include "Auth.h"
 
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 Auth::Auth(const String &_username, const String &_password) : username(_username), password(_password) {}
 
 User Auth::logIn(const Vector<User> &allUsers) const {
@@ -21,7 +23,9 @@ User Auth::logIn(const Vector<User> &allUsers) const {
     }
     // Otherwise returns user initialized with id of (-1);
     else {
+        SetConsoleTextAttribute(hConsole, 4);
         std::cout << "Incorrect username or password! \n";
+        SetConsoleTextAttribute(hConsole, 7);
         return userAuth;
     }
 }

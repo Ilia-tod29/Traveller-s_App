@@ -54,7 +54,15 @@ bool isDateValid(size_t month, size_t day, size_t year)
 }
 
 void Journey::setDestination(const String &_destination) {
-    this->destination = _destination;
+    if (_destination.doesContain(',')) {
+        this->destination = _destination;
+    }
+    else {
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(hConsole, 4);
+        std::cout << "Invalid destination format!\n";
+        SetConsoleTextAttribute(hConsole, 7);
+    }
 }
 
 void Journey::setTimePeriod(const String &_timePeriod) {
@@ -72,7 +80,11 @@ void Journey::setTimePeriod(const String &_timePeriod) {
         this->timePeriod = _timePeriod;
     }
     else {
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        this->timePeriod = "Invalid period";
+        SetConsoleTextAttribute(hConsole, 4);
         std::cout << "Invalid time period or date! \n";
+        SetConsoleTextAttribute(hConsole, 7);
     }
 }
 
@@ -81,7 +93,10 @@ void Journey::setGrade(const size_t &_grade) {
         this->grade = _grade;
     }
     else {
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(hConsole, 4);
         std::cout << "Invalid grade! \n";
+        SetConsoleTextAttribute(hConsole, 7);
     }
 }
 
@@ -92,11 +107,19 @@ void Journey::setGrade(const String &_grade) {
             this->grade = grade;
         }
         else {
+            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            this->grade = 6;
+            SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Invalid grade! \n";
+            SetConsoleTextAttribute(hConsole, 7);
         }
     }
     else {
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        this->grade = 6;
+        SetConsoleTextAttribute(hConsole, 4);
         std::cout << "Invalid grade! \n";
+        SetConsoleTextAttribute(hConsole, 7);
     }
 }
 
@@ -107,30 +130,68 @@ void Journey::setComment(const String &_comment) {
 void Journey::addPhoto(const String &_photo) {
     size_t i = 0;
     String name = _photo.leftPart('.');
+    std::cout <<"21" << std::endl;
     String extension = _photo.rightPart('.');
-    String validExtension("jpeg"), validExtension1("png");
+    std::cout <<"22" << std::endl;
+//    String validExtension("jpeg"), validExtension1("png");
+    std::cout <<"23" << std::endl;
     while ((name.getData()[i] >= 'A' && name.getData()[i] <= 'Z') || (name.getData()[i] >= 'a' && name.getData()[i] <= 'z') || name.getData()[i] == '_') {
         i++;
     }
 
-    if(i == name.length() && i != 0 && (extension == validExtension || extension == validExtension1)) {
+    std::cout <<"24" << std::endl;
+    std::cout <<extension << std::endl;
+    if(i == name.length() && i != 0 && (extension == "jpeg" || extension == "png")) {
+        std::cout <<"25" << std::endl;
         this->photos.pushBack(_photo);
+        this->photos.print();
+        std::cout <<"26" << std::endl;
     }
     else {
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(hConsole, 4);
         std::cout << "Invalid image format or name! \n";
+        SetConsoleTextAttribute(hConsole, 7);
     }
 }
 
 void Journey::setAndSeparatePhotos(const String &_photos) {
     String ph = _photos;
     while(ph.length() != 0) {
+        std::cout <<"1" << std::endl;
+        std::cout << ph.leftPart(',') << std::endl;
         this->addPhoto(ph.leftPart(','));
+        std::cout <<"2" << std::endl;
         if (ph == ph.rightPart(',')) {
+            std::cout <<"." << std::endl;
             break;
         }
         ph = ph.rightPart(',');
+        std::cout << ph << std::endl;
     }
 
+}
+//
+//void Journey::setAndSeparatePhotos(const String &_photos) {
+//    String ph = _photos;
+//    while(ph.length() != 0) {
+//        std::cout << ph.leftPart(',') << std::endl;
+//        std::cout << ph.rightPart(',') << std::endl;
+//        std::cout << std::boolalpha << (ph == ph.rightPart(',')) << std::endl;
+////        std::cout << ph;
+//        if (ph == ph.rightPart(',')) {
+//            this->addPhoto(ph);
+//            std::cout <<"." << std::endl;
+//            break;
+//        }
+//        this->addPhoto(ph.leftPart(','));
+//        ph = ph.rightPart(',');
+//    }
+
+//}
+
+void Journey::erasePhotos() {
+    this->photos.eraseData();
 }
 
 String Journey::getDestination() const {
@@ -167,7 +228,9 @@ String Journey::getTown() const {
 }
 
 String Journey::getCountry() const {
-    return this->destination.rightPart(',');
+    String country = this->destination.rightPart(',');
+    country.removeSpaces();
+    return country;
 }
 
 void Journey::display() const {

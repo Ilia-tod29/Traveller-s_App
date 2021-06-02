@@ -2,3 +2,8 @@ Pleven, Bulgaria|2020-03-20/2020-04-20|4|Great city for rest!|Pleven.png,roses.j
 Pernik, Bulgaria|2020-04-20/2020-05-29|2|Be careful|Pernik.png,truba.jpeg
 Paris, France|2020-06-04/2020-06-15|5|Fall in love with the food there.|paris.png,mime.jpeg
 Perushtica, Bulgaria|2021-03-25/2021-04-01|5|Great and quiet place!|perushtica.png
+Sofia, Bulgaria|2021-03-20/2021-04-23|4|Great place!|sofia.png
+Sofia, Bulgaria|1993-05-26/1993-05-31|5|Top destination!|pld.png,Sofia.jpeg,NDK.png
+Plovdiv, Bulgaria|2020-05-23/2020-06-20|4|Great place!|pld.png,Sofia.jpeg,NDK.png
+ValidTown, MyProgram|2021-02-20/2021-03-30|5|dosta dobre|valid.png,anotherValid.jpeg
+town, Country|2020-03-21/2020-04-26|5|top|valid.png

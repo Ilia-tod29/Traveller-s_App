@@ -30,9 +30,13 @@ public:
 
     String operator+(const String& other);
 
+    void removeSpaces();
+
     char operator[](const size_t index)const;
 
     bool isEmpty() const;
+
+    bool doesContain(const char& ch) const;
 
     String getExact(const size_t& start, const size_t& end) const;
 
@@ -40,7 +44,9 @@ public:
 
     String rightPart(const char& separator) const;
 
-    size_t toInt() const;
+    int toInt() const;
+
+//    void push_back(const char& val);
 
     friend std::ostream& operator<<(std::ostream& os, const String& str);
 

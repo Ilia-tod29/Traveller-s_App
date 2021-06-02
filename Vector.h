@@ -20,6 +20,8 @@ public:
 
     Vector &operator=(const Vector &other);
 
+    void eraseData();
+
     void reserve(const size_t &newCapacity);
 
     void resize(const size_t &newSize);
@@ -29,6 +31,8 @@ public:
     void popBack();
 
     void print() const;
+
+    bool elem(const T& element) const;
 
     T &operator[](size_t index) const {
         return this->data[index];
@@ -157,7 +161,6 @@ Vector<T> &Vector<T>::operator=(const Vector &other) {
 
 template<typename T>
 Vector<T>::~Vector() {
-//    std::cout << "Destructor is being called" << std::endl;
     destructAndDeleteRange(this->data, this->data + this->size);
 }
 
@@ -198,7 +201,6 @@ void Vector<T>::pushBack(const T &value) {
     if (this->size >= this->capacity) {
         reserve(this->capacity * 2);
     }
-
     new ((void*) (this->data + this->size)) T(value);
     this->size++;
 }
@@ -211,6 +213,27 @@ void Vector<T>::popBack() {
     }
     destructRange(this->data + this->size - 1, this->data + this->size);
     this->size--;
+}
+
+template<typename T>
+void Vector<T>::eraseData() {
+    if (this->size == 0) {
+        return;
+    }
+    destructAndDeleteRange(this->data, this->data + this->size);
+    allocateMemory(8);
+    this->size = 0;
+    this->capacity = 8;
+}
+
+template<typename T>
+bool Vector<T>::elem(const T &element) const {
+    for (int i = 0; i < this->size; ++i) {
+        if (this->data[i] == element) {
+            return true;
+        }
+    }
+    return false;
 }
 
 template <class T>

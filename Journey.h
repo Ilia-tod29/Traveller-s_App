@@ -6,10 +6,10 @@
 #define TRAVELLER_S_APP_JOURNEY_H
 
 #include <iostream>
+#include <windows.h>
 #include <time.h>
 #include "String.h"
 #include "Vector.h"
-
 
 class Journey {
 public:
@@ -26,6 +26,8 @@ public:
     void addPhoto(const String& _photo); // VALIDATION!
 
     void setAndSeparatePhotos(const String& _photos); // VALIDATION!
+
+    void erasePhotos();
 
     String getDestination() const;
 

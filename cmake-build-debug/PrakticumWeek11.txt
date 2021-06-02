@@ -1,0 +1,185 @@
+//Напишете функция с прототип void evaluate(const char*), която намира и изпечатва броят на малки и големи букви и броят на цифрите в даденият низvoid evaluate(const char* str, size_t &counterCap, size_t &counterSmall, size_t &counterDigits)
+{
+  
+	if (*str == '\0') {
+  	//std::cout << print();
+    return;
+  }
+  
+  if(((*str) >= 'A') && ((*str) <= 'Z'))
+  {
+  	counterCap++;
+  }
+  else if(((*str) >= 'a') && ((*str) <= 'z'))
+  {
+  	counterSmall++;
+  }
+  else if(((*str) >= '0') && ((*str) <= '9'))
+  {
+  	counterDigits++;
+  }
+  return evaluate(str + 1, counterCap, counterSmall, counterDigits);
+}
+
+int FindNumber(int* arr, int sizeArr, int k, int i, int counter) {
+	if (i == sizeArr) {
+		return counter;
+	}
+	else {
+		if (k ==arr[i]){
+			counter++;
+		}
+		i++;
+		return FindNumber(arr, sizeArr, k,i, counter);
+	}
+}
+
+//Даден е масив от най-много 100 елемента. Намерете броя елементи, които имат ляв и десен съсед, и са по-големи от съседите си.
+int findBiggestLocals(int* arr, int left, int right, int count, int size)
+{
+	if(size < 3)
+		return count;
+	if((*arr > left) && (*arr > right))
+	{
+		count++;
+	}
+	left = *arr;
+	right = *arr + 2;
+	return findBiggestLocals(arr + 1, left, right, count, size - 1);
+}
+
+//Напишете функция с прототип bool swapcase(char*), която променя всяка голяма буква на малка и всяка малка на голяма в подадения низ
+bool swapcase(char* str)
+{
+	if (*str == '\0') {
+  	return;
+  }
+  if (*str >= 97 && *str <= 122) {
+  	*str -= 32;
+  }
+  else if (*str >= 65 && *str <= 90) {
+  	*str += 32;
+  }
+ 
+  
+  return swapcase(str + 1);
+}
+
+int FindBigNeighbor (int *arr, int n, int counter){
+  if(size <= 3)
+  {
+    return counter;
+  }
+  if (i > 0 && i < n-1) {
+			if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+				counter++;
+        return FindBigNeighbor (arr+1, n, counter);
+      }
+  }
+}
+
+
+int biggestLocal(int *arr, int size){
+ 
+  if(size < 3){
+   	return 0; 
+  }
+  return (arr[0] < arr[1] && arr[1] > arr[2]) + biggestLocal(arr + 1, size - 1);
+}
+
+//Да се състави програма, в която чрез рекусивна функция се определя НОД на две цели неотрицателни числа, които не са едновременнно равни на 0.
+int NOD(int &n, int &m)
+{
+  int result;
+  
+	if(n == 0){
+   result = m; 
+  }
+  else if(m == 0){
+   result = n; 
+  }
+  else if(n > m)
+  {
+  	result = NOD(n, m);
+  }
+  else
+  {
+  	result = NOD(n, n % m);
+  }
+  
+  return result;
+}
+
+
+int main()
+{
+	int n;
+	std::cin >> n;
+	//int counter = 0;
+  int i =0;
+	int arr[100];
+	for (; i < n; i++) {
+		std::cin >> arr[i];
+	}
+
+	std::cout << FindBigNeighbor(arr, n, 0) << std::endl;
+	
+  
+  //Task01
+  int m, n;
+  
+  do{
+    cin >> m;
+    cin >> n;
+    
+    
+  }while(m < 0 || n < 0 || (m == 0 && n == 0));
+  
+  cout << "NOD = " << NOD(m, n) << endl;
+  
+	return 0;
+}
+
+int FindNod(int num1, int num2) {
+	int rest = 0;
+	
+	if (num1 % num2 == 0) {
+		return num2;
+	}
+	else {
+	rest = num1 % num2;
+	num1 = num2;
+	num2 = rest;
+	return FindNod(num1 , num2);
+			}
+}
+
+
+int FindNumber(int* arr, int sizeArr, int k, int i, int counter) {
+	if (i == sizeArr) {
+		return counter;
+	}
+	else {
+		if (k ==arr[i]){
+			counter++;
+		}
+		i++;
+		return FindNumber(arr, sizeArr, k,i, counter);
+	}
+}
+
+int IsDifferent(int* arr, int sizeArr, int counter, int i) {
+	
+	if (i == sizeArr) {
+		return counter;
+	}
+
+	for (int j = i+1; j < sizeArr; j++) {
+		if (arr[i] == arr[j]) {
+			counter++;
+		}
+	}
+	i++;
+	return IsDifferent(arr, sizeArr, counter, i);
+}
+I <3 UP

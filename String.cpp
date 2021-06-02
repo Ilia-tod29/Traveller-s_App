@@ -4,20 +4,24 @@
 #include "String.h"
 #include <cstring>
 
+
 size_t removeSpacesFromData(char* s)
 {
-    size_t removed = 0;
-    char* cpy = s;
+    char* cpy = s;  // an alias to iterate through s without moving s
     char* temp = s;
+    size_t removed = 0;
 
     while (*cpy)
     {
-        if (*cpy != ' ') {
+        if (*cpy != ' ')
+        {
             *temp++ = *cpy;
+        }else {
             removed++;
         }
         cpy++;
     }
+//    std::cout << s << std::endl; // This prints out the desired result: abbcccd
     *temp = 0;
     return removed;
 }
@@ -34,8 +38,14 @@ void String::cpy(const String& other) {
 }
 
 void String::vanish() {
-    delete[] this->str;
-    this->str = nullptr;
+    if (this->str != nullptr) {
+        delete[] this->str;
+//        std::cout<<"notnull\n";
+//    this->str = nullptr;
+    }
+//    else{
+//    std::cout<<"nullptr\n";
+//    }
 }
 
 String::String() : str(nullptr), size(0) {}
@@ -107,6 +117,10 @@ String & String::operator+=(const String &other) {
     return *this;
 }
 
+void String::removeSpaces() {
+    this->size -= removeSpacesFromData(this->str);
+}
+
 char String::operator[](const size_t index) const {
     if (index > this->size) {
         exit(1);
@@ -119,6 +133,17 @@ bool String::isEmpty() const {
         return true;
     }
     return false;
+}
+
+bool String::doesContain(const char &ch) const {
+    bool flag = false;
+    for (int i = 0; i < this->size; ++i) {
+        if (this->str[i] == ch) {
+            flag = true;
+            break;
+        }
+    }
+    return flag;
 }
 
 String String::getExact(const size_t &start, const size_t &end) const {
@@ -176,7 +201,7 @@ String String::rightPart(const char &separator) const {
     return result;
 }
 
-size_t String::toInt() const {
+int String::toInt() const {
     size_t temp = 0;
     for (int i = 0; i < this->size; ++i) {
         if(!(this->str[i] >= '0' && this->str[i] <= '9')) {
@@ -191,6 +216,8 @@ size_t String::toInt() const {
 
 String::~String() {
     vanish();
+//    this->size = 0;
+//    std::cout << "deleted\n";
 }
 
 std::ostream& operator<<(std::ostream& os, const String& str) {
@@ -205,12 +232,10 @@ std::istream& operator>>(std::istream& is, String& str) {
     delete[] str.str;
     char* container = new char[200];
 
-//    is.ignore();
     is.getline(container, 200);
     str.size = strlen(container);
     str.str = new char[str.size + 1];
     strcpy(str.str, container);
-//    str.str[str.size + 1] = '\0';
 
     return is;
 }
@@ -229,3 +254,37 @@ std::istream& getline(std::istream& stream, String& str, const char& end)
     str.size = i;
     return stream;
 }
+//void String::push_back(const char& val) {
+////    if (capacity == 0 || !data_) {
+////        reserve(INITIALCAPACITY);
+////    }
+////    else if (length == capacity) {
+////        reserve(2 * capacity);
+////    }
+//
+//
+////    data[length++] = val;
+////    data[length] = '\0';
+//
+//    String help = *this;
+//    vanish();
+//    this->str = new char[help.size + 1];
+//    for (int i = 0; i < help.size; ++i) {
+//        this->str[i] = help.str[i];
+//    }
+//    this->str[help.size] = val;
+//    this->str[help.size + 1] = '\0';
+//    this->size = help.size + 1;
+//}
+//
+//std::istream& getline(std::istream& stream, String& str, const char& end)
+//{
+//    char ch;
+//    str.vanish();
+//    stream.get(ch);
+//    std::cout << ch << std::endl;
+//    while (stream.get(ch) && ch != end) {
+//        str.push_back(ch);
+//    }
+//    return stream;
+//}
