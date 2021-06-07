@@ -20,9 +20,12 @@ public:
 
     User logIn(const Vector<User>& allUsers) const;
 
-    // The ID is auto-counted int the main
+    // The ID is auto-counted in the main
     // Could be changed - username and password to be from data members
     User signUp(const int& _id, const String& _eMail);
+
+    String getUsername ()const;
+    String getPassword () const;
 
 private:
     String username;

@@ -28,5 +28,7 @@ CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Journey.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../String.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../User.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../Vector.h
+CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../doctest.h
 CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/Traveller_s_App.dir/main.cpp.obj: ../myDocTests.h
 

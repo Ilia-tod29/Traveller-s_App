@@ -7,3 +7,4 @@ Sofia, Bulgaria|1993-05-26/1993-05-31|5|Top destination!|pld.png,Sofia.jpeg,NDK.
 Plovdiv, Bulgaria|2020-05-23/2020-06-20|4|Great place!|pld.png,Sofia.jpeg,NDK.png
 ValidTown, MyProgram|2021-02-20/2021-03-30|5|dosta dobre|valid.png,anotherValid.jpeg
 town, Country|2020-03-21/2020-04-26|5|top|valid.png
+Pazardzhik, Bulgaria|2020-05-29/2020-06-10|5|Pazardzhik e super qk|pz.png,pazardzhik.jpeg

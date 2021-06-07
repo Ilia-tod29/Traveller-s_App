@@ -113,6 +113,9 @@
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/main.cpp">
 			<Option target="Traveller_s_App"/>
 		</Unit>
+		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/myDocTests.h">
+			<Option target="Traveller_s_App"/>
+		</Unit>
 		<Unit filename="E:/FMI/OOP/Traveller&apos;s_App/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

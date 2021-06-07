@@ -150,12 +150,12 @@ void Journey::setAndSeparatePhotos(const String &_photos) {
     String ph = _photos;
     while(ph.length() != 0) {
         this->addPhoto(ph.leftPart(','));
+
         if (ph == ph.rightPart(',')) {
             break;
         }
         ph = ph.rightPart(',');
     }
-
 }
 //
 //void Journey::setAndSeparatePhotos(const String &_photos) {
@@ -198,6 +198,9 @@ String Journey::getComment() const {
 
 String Journey::getPhotos() const {
     String allPhotos;
+    if (this->photos.getSize() == 0) {
+        return "";
+    }
     for (int i = 0; i < this->photos.getSize(); ++i) {
         if(i != this->photos.getSize() - 1) {
             allPhotos += (this->photos[i] + ",");

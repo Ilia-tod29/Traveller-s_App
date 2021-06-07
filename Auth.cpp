@@ -54,3 +54,11 @@ User Auth::signUp(const int &_id, const String &_eMail) {
         return newUser;
     }
 }
+
+String Auth::getUsername() const {
+    return this->username;
+}
+
+String Auth::getPassword() const {
+    return this->password;
+}

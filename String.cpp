@@ -40,12 +40,8 @@ void String::cpy(const String& other) {
 void String::vanish() {
     if (this->str != nullptr) {
         delete[] this->str;
-//        std::cout<<"notnull\n";
-//    this->str = nullptr;
+        this->str = nullptr;
     }
-//    else{
-//    std::cout<<"nullptr\n";
-//    }
 }
 
 String::String() : str(nullptr), size(0) {}

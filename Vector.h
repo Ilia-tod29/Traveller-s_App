@@ -60,8 +60,8 @@ private:
      * @param capacity размер на заделената памет
      * @return указател към заделената памет
      */
-    static T *allocateMemory(const size_t &capacity) {
-        return static_cast<T *> (operator new(sizeof(T) * capacity));
+    T *allocateMemory(const size_t &capacity) {
+        return reinterpret_cast<T *> (operator new(sizeof(T) * capacity));
     }
 
     /**
@@ -220,10 +220,11 @@ void Vector<T>::eraseData() {
     if (this->size == 0) {
         return;
     }
-    destructAndDeleteRange(this->data, this->data + this->size);
+    destructRange(this->data, this->data + this->size);
     allocateMemory(8);
     this->size = 0;
     this->capacity = 8;
+    constructRange(this->data, this->data + this->capacity);
 }
 
 template<typename T>
