@@ -48,7 +48,6 @@ namespace myInterface {
             std::ofstream pushJourney(DB.getData());
             pushJourney.close();
         } else {
-//            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 4);
             std::cout << "Unable to open the file \n";
             SetConsoleTextAttribute(hConsole, 7);

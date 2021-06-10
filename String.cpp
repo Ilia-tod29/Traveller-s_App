@@ -7,7 +7,7 @@
 
 size_t removeSpacesFromData(char* s)
 {
-    char* cpy = s;  // an alias to iterate through s without moving s
+    char* cpy = s;
     char* temp = s;
     size_t removed = 0;
 
@@ -21,7 +21,6 @@ size_t removeSpacesFromData(char* s)
         }
         cpy++;
     }
-//    std::cout << s << std::endl; // This prints out the desired result: abbcccd
     *temp = 0;
     return removed;
 }
@@ -31,10 +30,6 @@ void String::cpy(const String& other) {
     this->size = other.size;
     this->str = new char[strlen(other.str) + 1];
     strcpy(this->str, other.str);
-//    for (int i = 0; i < other.size; ++i) {
-//        this->str[i] = other.str[i];
-//    }
-//    this->str[this->size] = '\0';
 }
 
 void String::vanish() {
@@ -212,8 +207,6 @@ int String::toInt() const {
 
 String::~String() {
     vanish();
-//    this->size = 0;
-//    std::cout << "deleted\n";
 }
 
 std::ostream& operator<<(std::ostream& os, const String& str) {
@@ -250,37 +243,3 @@ std::istream& getline(std::istream& stream, String& str, const char& end)
     str.size = i;
     return stream;
 }
-//void String::push_back(const char& val) {
-////    if (capacity == 0 || !data_) {
-////        reserve(INITIALCAPACITY);
-////    }
-////    else if (length == capacity) {
-////        reserve(2 * capacity);
-////    }
-//
-//
-////    data[length++] = val;
-////    data[length] = '\0';
-//
-//    String help = *this;
-//    vanish();
-//    this->str = new char[help.size + 1];
-//    for (int i = 0; i < help.size; ++i) {
-//        this->str[i] = help.str[i];
-//    }
-//    this->str[help.size] = val;
-//    this->str[help.size + 1] = '\0';
-//    this->size = help.size + 1;
-//}
-//
-//std::istream& getline(std::istream& stream, String& str, const char& end)
-//{
-//    char ch;
-//    str.vanish();
-//    stream.get(ch);
-//    std::cout << ch << std::endl;
-//    while (stream.get(ch) && ch != end) {
-//        str.push_back(ch);
-//    }
-//    return stream;
-//}

@@ -38,6 +38,10 @@ E:/FMI/OOP/Traveller's_App/Auth.h
 Journey.h
 E:/FMI/OOP/Traveller's_App/Journey.h
 
+E:/FMI/OOP/Traveller's_App/Journey.cpp
+Journey.h
+E:/FMI/OOP/Traveller's_App/Journey.h
+
 E:/FMI/OOP/Traveller's_App/Journey.h
 iostream
 -
@@ -49,6 +53,12 @@ String.h
 E:/FMI/OOP/Traveller's_App/String.h
 Vector.h
 E:/FMI/OOP/Traveller's_App/Vector.h
+
+E:/FMI/OOP/Traveller's_App/String.cpp
+String.h
+E:/FMI/OOP/Traveller's_App/String.h
+cstring
+-
 
 E:/FMI/OOP/Traveller's_App/String.h
 iostream

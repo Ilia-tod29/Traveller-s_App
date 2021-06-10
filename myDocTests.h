@@ -67,8 +67,6 @@ TEST_CASE("Journey setters test")
     CHECK(_journey.getPhotos() == "pz.jpeg");
     _journey.erasePhotos();
     CHECK(_journey.getPhotos() == "");
-//    _journey.setAndSeparatePhotos("pz.png,plz.jpeg,pzz.png");
-//    CHECK(_journey.getPhotos() == "pz.png,plz.jpeg,pzz.png");
 
 
     CHECK(_journey.getDestination() == "Pazardzhik, Bulgaria");

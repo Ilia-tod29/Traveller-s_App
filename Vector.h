@@ -37,8 +37,6 @@ public:
     T &operator[](size_t index) const {
         return this->data[index];
     }
-
-
     size_t getSize() const {
         return this->size;
     }
@@ -89,7 +87,6 @@ private:
         }
     }
 
-
     /**
      * Конструира с конструктор за копиране на обектите върху паметта, опредлена от обхвана begin и end
      * @param begin - указател към началото на обхвата
@@ -102,7 +99,6 @@ private:
             ++destination;
         }
     }
-
     /**
      * Извика деструктурите на обектите върху паметта, определена от обхвата begin до end
      * @param begin укзател към началот
@@ -166,7 +162,7 @@ Vector<T>::~Vector() {
 
 template<typename T>
 void Vector<T>::reserve(const size_t &newCapacity) {
-    if (newCapacity > this->capacity) {
+    if (newCapacity >= this->capacity) {
         T *newData = allocateMemory(newCapacity);
         copyRange(this->data, this->data + this->size, newData);
         destructAndDeleteRange(this->data, this->data + this->size);

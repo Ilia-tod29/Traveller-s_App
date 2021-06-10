@@ -46,8 +46,6 @@ public:
 
     int toInt() const;
 
-//    void push_back(const char& val);
-
     friend std::ostream& operator<<(std::ostream& os, const String& str);
 
     friend std::istream& operator>>(std::istream& is, String& str);

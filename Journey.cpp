@@ -157,24 +157,6 @@ void Journey::setAndSeparatePhotos(const String &_photos) {
         ph = ph.rightPart(',');
     }
 }
-//
-//void Journey::setAndSeparatePhotos(const String &_photos) {
-//    String ph = _photos;
-//    while(ph.length() != 0) {
-//        std::cout << ph.leftPart(',') << std::endl;
-//        std::cout << ph.rightPart(',') << std::endl;
-//        std::cout << std::boolalpha << (ph == ph.rightPart(',')) << std::endl;
-////        std::cout << ph;
-//        if (ph == ph.rightPart(',')) {
-//            this->addPhoto(ph);
-//            std::cout <<"." << std::endl;
-//            break;
-//        }
-//        this->addPhoto(ph.leftPart(','));
-//        ph = ph.rightPart(',');
-//    }
-
-//}
 
 void Journey::erasePhotos() {
     this->photos.eraseData();
